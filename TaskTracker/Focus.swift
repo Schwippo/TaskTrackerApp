@@ -1,8 +1,11 @@
-//
-//  Focus.swift
-//  TaskTracker
-//
-//  Created by Admin on 27.07.24.
-//
+import SwiftUI
 
-import Foundation
+struct Focus: Identifiable, Equatable {
+    var id = UUID()
+    var name: String
+    var color: Color
+    
+    static func == (lhs: Focus, rhs: Focus) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

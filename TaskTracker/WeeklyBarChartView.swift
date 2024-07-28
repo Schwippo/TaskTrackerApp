@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct WeekBarChart: View {
+struct WeeklyBarChartView: View {
     var focus: String
     var logs: [ActivityLog]
     
