@@ -1,52 +1,51 @@
 import SwiftUI
 
 struct AddFocusView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @Binding var customFocuses: [Focus]
+    @Binding var focuses: [Focus]
+    @Binding var events: [Event]
     @State private var focusName: String = ""
     @State private var selectedColor: Color = .blue
-
+    @State private var isEvent: Bool = false
+    
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Fokus-Name")) {
-                    TextField("Name", text: $focusName)
+        VStack {
+            TextField("Name", text: $focusName)
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(8)
+            
+            ColorPicker("Farbe", selection: $selectedColor)
+                .padding()
+            
+            Toggle("Ereignis", isOn: $isEvent)
+                .padding()
+            
+            Button(action: {
+                if isEvent {
+                    let newEvent = Event(name: focusName, timestamp: Date(), color: selectedColor)
+                    events.append(newEvent)
+                } else {
+                    let newFocus = Focus(name: focusName, color: selectedColor)
+                    focuses.append(newFocus)
                 }
-                
-                Section(header: Text("Fokus-Farbe")) {
-                    ColorPicker("Wähle eine Farbe", selection: $selectedColor)
-                }
-                
-                Button(action: addFocus) {
-                    Text("Hinzufügen")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
+                focusName = ""
+            }) {
+                Text("Hinzufügen")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
             }
-            .navigationTitle("Eigene Fokus hinzufügen")
-            .navigationBarItems(trailing: Button("Abbrechen") {
-                presentationMode.wrappedValue.dismiss()
-            })
+            .padding()
+            
+            Spacer()
         }
+        .padding()
     }
-
-    func addFocus() {
-        let newFocus = Focus(id: UUID(), name: focusName, color: selectedColor)
-        customFocuses.append(newFocus)
-        presentationMode.wrappedValue.dismiss()
-    }
-}
-
-struct Focus: Identifiable {
-    var id: UUID
-    var name: String
-    var color: Color
 }
 
 struct AddFocusView_Previews: PreviewProvider {
     static var previews: some View {
-        AddFocusView(customFocuses: .constant([]))
+        AddFocusView(focuses: .constant([Focus(name: "Sport", color: .blue)]), events: .constant([]))
     }
 }

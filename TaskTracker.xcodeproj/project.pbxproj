@@ -21,6 +21,9 @@
 		841A8E972C53DA0B00FC1BC3 /* ActivityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A8E962C53DA0B00FC1BC3 /* ActivityLog.swift */; };
 		841A8E992C53DA9900FC1BC3 /* DailyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A8E982C53DA9900FC1BC3 /* DailyView.swift */; };
 		841A8E9B2C53DB6100FC1BC3 /* WeeklyBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A8E9A2C53DB6100FC1BC3 /* WeeklyBarChartView.swift */; };
+		841A8EA12C550D0500FC1BC3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A8EA02C550D0500FC1BC3 /* Event.swift */; };
+		841A8EA32C55122D00FC1BC3 /* Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A8EA22C55122D00FC1BC3 /* Focus.swift */; };
+		841A8EA52C5517F700FC1BC3 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A8EA42C5517F700FC1BC3 /* TaskDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		841A8E962C53DA0B00FC1BC3 /* ActivityLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLog.swift; sourceTree = "<group>"; };
 		841A8E982C53DA9900FC1BC3 /* DailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyView.swift; sourceTree = "<group>"; };
 		841A8E9A2C53DB6100FC1BC3 /* WeeklyBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBarChartView.swift; sourceTree = "<group>"; };
+		841A8EA02C550D0500FC1BC3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		841A8EA22C55122D00FC1BC3 /* Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus.swift; sourceTree = "<group>"; };
+		841A8EA42C5517F700FC1BC3 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,9 @@
 				841A8E962C53DA0B00FC1BC3 /* ActivityLog.swift */,
 				841A8E982C53DA9900FC1BC3 /* DailyView.swift */,
 				841A8E9A2C53DB6100FC1BC3 /* WeeklyBarChartView.swift */,
+				841A8EA02C550D0500FC1BC3 /* Event.swift */,
+				841A8EA22C55122D00FC1BC3 /* Focus.swift */,
+				841A8EA42C5517F700FC1BC3 /* TaskDetailView.swift */,
 			);
 			path = TaskTracker;
 			sourceTree = "<group>";
@@ -282,8 +291,11 @@
 				841A8E972C53DA0B00FC1BC3 /* ActivityLog.swift in Sources */,
 				841A8E952C53D95000FC1BC3 /* FocusStatisticsView.swift in Sources */,
 				841A8E5D2C53BB2F00FC1BC3 /* ContentView.swift in Sources */,
+				841A8EA12C550D0500FC1BC3 /* Event.swift in Sources */,
+				841A8EA32C55122D00FC1BC3 /* Focus.swift in Sources */,
 				841A8E892C53C03B00FC1BC3 /* AddFocusView.swift in Sources */,
 				841A8E852C53BEC500FC1BC3 /* TaskTrackerView.swift in Sources */,
+				841A8EA52C5517F700FC1BC3 /* TaskDetailView.swift in Sources */,
 				841A8E5B2C53BB2F00FC1BC3 /* TaskTrackerApp.swift in Sources */,
 				841A8E9B2C53DB6100FC1BC3 /* WeeklyBarChartView.swift in Sources */,
 				841A8E872C53BEDB00FC1BC3 /* DataLogView.swift in Sources */,
